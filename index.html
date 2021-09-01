@@ -17,9 +17,9 @@
         <section class="container">
             <h1 class="text-center text-primary my-3">Welcome to Book Archive!!</h1>
             <div class="input-group mb-3 w-75 mx-auto">
-                <input type="text" class="form-control" placeholder="Search your book here ..."
+                <input id="search-input" type="text" class="form-control" placeholder="Search your book here ..."
                     aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
+                <button class="btn btn-outline-primary" type="button" id="search-btn">Search</button>
             </div>
             <!-- spinner  -->
             <div class="text-center">
@@ -27,6 +27,12 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
+            <div id="error"></div>
+            <div id="result" class="text-center text-success fs-4 fst-italic"></div>
+        </section>
+        <!-- view result  -->
+        <section class="container">
+            <div id="view-details" class="row"></div>
         </section>
     </main>
 
