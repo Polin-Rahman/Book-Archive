@@ -27,30 +27,24 @@ function showResults(dataArray) {
     console.log(dataLength); */
 
     allData.slice(0, 10).forEach(item => {
-
+        console.log(item.text[2], item.text[3]);
         const div = document.createElement('div');
         div.classList.add('col-md-3');
         div.innerHTML = `
                     <div class="rounded overflow-hidden border p-2">
-                        <img src="p.png" class="w-100" alt="...">
+                        <img src=" https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg" class="w-100" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Book title: ${item.title}</h5>
-                        <p class="card-text">Author: ${item.author_alternative_name}</p>
-                        <p class="card-text">Author: ${item.publisher_facet}</p>
-                        <p class="card-text">First published: ${item.first_publish_year}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title"><i>Book title:</i> ${item.title}</h5>
+                        <hr>
+                        <small>${item.text[2]}</small>
+                        <small>${item.text[3]}</small>
+                        <hr>
+                        <p class="card-text"><b>Author:</b> ${item.author_name[0]}</p>
+                        <p class="card-text"><b>Publisher:</b> ${item.publisher_facet[0]}</p>
+                        <p class="card-text"><b>First published:</b> ${item.first_publish_year}</p>
                     </div>
         `;
-
         viewDetails.appendChild(div);
-
     });
-
-    /* console.log(item.author_alternative_name);
-    console.log(item.title);
-    console.log(item.first_publish_year);
-    console.log(item.publisher_facet); */
 }
-
-//
